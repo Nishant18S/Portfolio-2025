@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Nishant Sankar Swain - Web Design & Development Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/d1.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS Bundle (includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script>
+
+  
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* General Section Styling */
+.section {
+  padding: 60px 0;
+}
+
+.internship, .hackathon,.about,.services,.portfolio,.resume,.home,.contact {
+  margin-bottom: 40px;
+}
+
+.internship img, .hackathon img {
+  width: 500px; /* Ensures images take up full container width */
+  height: 500px;
+}
+
+.internship-text, .hackathon-text {
+  padding-left: 20px;
+}
+
+.internship-text h3, .hackathon-text h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.internship-text p, .hackathon-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Smooth Scroll Effect */
+html {
+  scroll-behavior: smooth;
+}
+/* Flexbox container to display the hackathon details in a row */
+.hackathon-details-row {
+  display: flex;
+  justify-content: space-between; /* Space between the two items */
+  gap: 40px; /* Optional: Adds space between items */
+  flex-wrap: wrap; /* Allows items to wrap if necessary (e.g., on small screens) */
+}
+
+/* Individual hackathon details */
+.hackathon-details {
+  flex: 1; /* Allows the details to take equal width */
+  max-width: 48%; /* Optional: Ensures the details don't stretch too wide */
+  box-sizing: border-box;
+}
+
+.hackathon-image img {
+  width: 100%; /* Makes the image take up full width of its container */
+  height: auto;
+}
+
+.hackathon-text h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hackathon-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #007bff;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer .copyright,
+.footer .footer-description {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.footer .social-links a {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 767px) {
+  .footer .footer-text {
+    font-size: 12px;
+  }
+  .footer .social-links a {
+    font-size: 20px;
+  }
+}
+
+/* Light mode (default) */
+.main,#about {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode */
+.main.dark-mode,#about.dark-mode,#resume.dark-mode,#portfolio.dark-mode,#services.dark-mode,#about.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+  </style>
+</head>
+
+<body class="index-page">
+  <!-- <audio id="welcomeAudio" preload="auto">
+    <source src="assets/img/Internship/welcome.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<button id="playAudioButton" style="display:block;">Click to Play Welcome Audio</button>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById("welcomeAudio");
+            var playButton = document.getElementById("playAudioButton");
+
+            // Try to autoplay audio
+            var playPromise = audio.play();
+
+            // If autoplay fails, show the button to the user
+            if (playPromise !== undefined) {
+                playPromise.then(function() {
+                    // Autoplay worked
+                }).catch(function(error) {
+                    // Autoplay failed, show the button
+                    playButton.style.display = "block";
+                });
+            }
+
+            // Play audio on button click
+            playButton.addEventListener("click", function() {
+                audio.play();
+                playButton.style.display = "none"; // Hide the button after the audio starts
+            });
+        };
+    </script> -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/d1.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename"> Nishant Sankar Swain</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-github"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="#internship"><i class="bi bi-briefcase navicon"></i> Internships</a></li>
+        <li><a href="#hackathon"><i class="bi bi-code-slash navicon"></i> Hackathons</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+    </ul>
+    
+    <!-- Add this button for dark/light mode toggle -->
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+    </button>
+    </nav>
+    
+    
+    
+  </header>
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const icon = themeToggleButton.querySelector('i');
+  
+    // Check if the page is in dark mode (you can use localStorage or media queries to remember theme)
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  
+    // Set initial icon based on the current theme
+    if (isDarkMode) {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+      document.body.classList.add('dark-mode');
+    } else {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+      document.body.classList.remove('dark-mode');
+    }
+  
+    // Toggle theme when button is clicked
+    themeToggleButton.addEventListener('click', () => {
+      if (icon.classList.contains('fa-sun')) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'true');
+        themeToggleButton.setAttribute('aria-label', 'Switch to light mode');
+      } else {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'false');
+        themeToggleButton.setAttribute('aria-label', 'Switch to dark mode');
+      }
+    });
+  </script>
+  
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  </style>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        // Select elements by their IDs using querySelectorAll
+        const mainElements = document.querySelectorAll('#about, #resume,#hero, #portfolio,#services, #internship,#hackathon, #contact');
+        
+        // Loop through each selected element and toggle dark-mode
+        mainElements.forEach(function(element) {
+            element.classList.toggle('dark-mode');
+        });
+
+        // Save user preference
+        if (mainElements[0].classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Apply saved theme on page load
+    window.addEventListener('load', function() {
+        const savedTheme = localStorage.getItem('theme');
+        
+        // Select elements by their IDs using querySelectorAll
+        const mainElements = document.querySelectorAll('#about, #resume,#hero, #portfolio,#services, #internship,#hackathons, #contact');
+        
+        if (savedTheme === 'dark') {
+            mainElements.forEach(function(element) {
+                element.classList.add('dark-mode');
+            });
+        }
+    });
+</script>
+
+  
+
+  <main class="main">
+    
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/dari.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 style="color: #fff;">Nishant Sankar Swain</h2>
+        <p>I'm <span class="typed" data-typed-items="Computer Science Student, Software Developer, Researcher, Animal Lover, Mathematics/Physics Teacher,Photographer, Freelancer,Full Stack Web Devloper,JAVA Devloper,Designer, Developer, Freelancer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+<!-- About Section -->
+<section id="about" class="about section dark-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <p>I am an enthusiastic and passionate Full Stack Developer currently pursuing my B.Tech degree in Computer Science Engineering at the Institute of Technical Education & Research (ITER), Siksha 'O' Anusandhan University, Bhubaneswar. With a keen interest in coding and software development, I have developed strong skills in both front-end and back-end technologies, which I continue to improve and refine through hands-on projects.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <!-- Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/ding.jpg" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/dari.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/dai.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/d2.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/d1.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-8 content">
+        <h2>Full Stack Developer &amp; Technology Enthusiast</h2>
+        <p class="fst-italic py-3">
+          Passionate about coding and developing innovative solutions to real-world problems. I aim to create seamless user experiences while leveraging the power of modern web technologies.
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 December 2003</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 7978304877</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bhubaneswar, India</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech (Currently pursuing)</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>nishant.sankar2003@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="py-3">
+          As I approach the final stages of my degree, I’ve worked on a variety of projects that involved the complete software development life cycle—from designing intuitive user interfaces to building scalable back-end systems. My goal is to continue learning and developing my skills while contributing to meaningful projects. In addition to coding, I am also passionate about staying up-to-date with the latest technologies and best practices in the industry.
+        </p>
+        <p>
+          When I’m not coding, I enjoy solving complex problems, collaborating with others, and exploring new technologies in the software development world. I am also interested in developing mobile applications and exploring opportunities in the field of Artificial Intelligence.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+
+    <!-- Stats Section -->
+<section id="stats" class="stats section dark-background ">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-emoji-smile"></i>
+          <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Happy Clients</strong> <span>Providing services to individuals</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-journal-richtext"></i>
+          <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Projects</strong> <span>Personal & academic projects completed</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-headset"></i>
+          <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Hours Of Support</strong> <span>Dedicated time to learning and helping others</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-people"></i>
+          <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Collaborations</strong> <span>Working with peers on various projects</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+
+    <!-- Skills Section -->
+<section id="skills" class="skills section dark-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>Developing web applications with a mix of front-end and back-end technologies.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row skills-content skills-animation">
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>jQuery</span> <i class="val">70%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Bootstrap</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>MySQL/Database</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>C/C++</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        
+
+        <div class="progress">
+          <span class="skill"><span>Python</span> <i class="val">70%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Java</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Skills Section -->
+
+   <!-- Resume Section -->
+<section id="resume" class="resume section dark-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>
+        A well-crafted resume showcases your skills, experiences, and accomplishments, providing a snapshot of your professional journey. It highlights your key strengths, qualifications, and achievements, offering potential employers a concise summary of your career. A strong resume can be the difference in landing an interview and standing out in a competitive job market.
+    </p>
+    <p>
+        If you'd like to explore my full CV, click the button below to download or view it.
+    </p>
+    <br><br>
+    <a href="path/to/your/cv.pdf" class="btn btn-primary" target="_blank">See My CV</a>
+</div><!-- End Section Title -->
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Summary</h3>
+
+        <div class="resume-item pb-0">
+          <h4>Nishant</h4>
+          <p><em>Innovative and deadline-driven Full Stack Developer with 2+ years of experience in web development, building scalable and user-friendly applications. Currently pursuing B.Tech in Computer Science & Engineering with a focus on web technologies and software development.</em></p>
+          <ul>
+            <li>Bhubaneswar, Odisha</li>
+            <li><a href="tel:+91978304877">+91 7978304877</a></li>
+            <li><a href="mailto:nishant.sankar2003@gmail.com">nishant.sankar2003@gmail.com</a></li>
+        </ul>        
+        </div><!-- End Resume Item -->
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>Bachelor of Technology in Computer Science & Engineering</h4>
+          <h5>2022 - Present</h5>
+          <p><em>Institute of Technical Education & Research (ITER), Siksha 'O' Anusandhan University, Bhubaneswar</em></p>
+          <p>Currently pursuing B.Tech in Computer Science & Engineering. Focus on Full Stack Development, Data Structures, and Algorithms.</p>
+        </div><!-- End Resume Item -->
+
+        <div class="resume-item">
+          <h4>12th Science</h4>
+          <h5>2019 - 2021</h5>
+          <p><em>Jupiter Science Higher Secondary School, Gangapada, Khordha</em></p>
+          <p>Studied Science with a focus on Mathematics, Physics, Chemistry, and Biology. Board of Education: Council of Higher Secondary Education (CHSE), Odisha.</p>
+        </div><!-- End Resume Item -->
+
+        <div class="resume-item">
+          <h4>10th Grade</h4>
+          <h5>2008 - 2019</h5>
+          <p><em>Saraswati Shishu Vidya Mandir, Unit-8, Bhubaneswar</em></p>
+          <p>Completed secondary education with a focus on Mathematics, Science, and Literature. Board of Education: Board of Secondary Education (BSE), Odisha.</p>
+        </div><!-- End Resume Item -->
+
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Professional Experience</h3>
+
+        <div class="resume-item">
+          <h4>Full Stack Developer Intern</h4>
+          <h5>2023 - Present</h5>
+          <p><em>Your Company Name, Location</em></p>
+          <ul>
+            <li>Collaborating with senior developers to design and implement web applications using technologies like JavaScript, PHP, and MySQL.</li>
+            <li>Participating in agile sprints and contributing to both front-end and back-end development.</li>
+            <li>Building responsive user interfaces with HTML, CSS, JavaScript, and Bootstrap.</li>
+            <li>Writing clean, maintainable code and conducting unit testing to ensure application reliability.</li>
+          </ul>
+        </div><!-- End Resume Item -->
+
+        <div class="resume-item">
+          <h4>Junior Web Developer</h4>
+          <h5>2022 - 2023</h5>
+          <p><em>Your Previous Company, Location</em></p>
+          <ul>
+            <li>Developed, tested, and maintained web applications using HTML, CSS, JavaScript, and PHP.</li>
+            <li>Worked on creating and managing databases with MySQL to support web applications.</li>
+            <li>Collaborated with the design team to ensure user-friendly and responsive UI/UX.</li>
+            <li>Assisted in debugging and resolving technical issues related to websites and applications.</li>
+          </ul>
+        </div><!-- End Resume Item -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Resume Section -->
+<script>
+  // Adding smooth scroll behavior for internal navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+</script>
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Product</li>
+            <li data-filter=".filter-branding">Branding</li>
+            <li data-filter=".filter-books">Books</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Internship Section -->
+    <section id="internship" class="portfolio section dark-background ">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Internships</h2>
+        <p>Internships are a great way to gain practical experience, build professional skills, and explore new areas of interest in a real-world setting. Through these internships, I have had the opportunity to apply my theoretical knowledge in practical situations, collaborate with diverse teams, and gain valuable insights into industry trends. Each internship has helped me grow both personally and professionally, enhancing my technical and soft skills in various domains such as web development, UX/UI design, and software engineering.
+
+          These experiences have provided me with a deeper understanding of the challenges professionals face, as well as the strategies required to navigate them. From learning new programming languages to honing problem-solving skills, my internships have laid a solid foundation for my future career.</p>
+      </div><!-- End Section Title -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const showMoreBtn = document.getElementById("showMoreBtn");
+          const allFilter = document.querySelector("[data-filter='*']");
+          let isAllActive = allFilter.classList.contains("filter-active");
+      
+          // Function to check active filter
+          function checkFilter() {
+            isAllActive = allFilter.classList.contains("filter-active");
+            if (isAllActive) {
+              showMoreBtn.style.display = "block"; // Show button only in "All" filter
+            } else {
+              showMoreBtn.style.display = "none"; // Hide button in other filters
+            }
+          }
+      
+          // Observe filter changes (use event delegation)
+          document.querySelector(".portfolio-filters").addEventListener("click", function (e) {
+            if (e.target.tagName === "LI") {
+              document.querySelectorAll(".portfolio-filters li").forEach(item => item.classList.remove("filter-active"));
+              e.target.classList.add("filter-active");
+              checkFilter();
+            }
+          });
+      
+          // Show More functionality
+          showMoreBtn.addEventListener("click", function () {
+            if (isAllActive) {
+              document.querySelectorAll(".hidden-item").forEach(item => {
+                item.classList.remove("hidden-item");
+                item.classList.add("show-item");
+              });
+              showMoreBtn.style.display = "none"; // Hide button after showing more
+            }
+          });
+      
+          checkFilter(); // Initial check
+        });
+      </script>      
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Offer Letter</li>
+            <li data-filter=".filter-product">Certificate</li>
+            <li data-filter=".filter-branding">Letter Of Recomendation</li>
+            <!-- <li data-filter=".filter-books">Books</li> --> 
+          </ul><!-- End Portfolio Filters -->
+          
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/cognifyz.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Cognifyz Technologies</h4>
+                  <p>I am also receiving a completion certificate for my role as a Java Development Intern with Cognifyz Technologies, where I gained valuable experience in Java development and project management <br>08/08/2024</p>
+                  <a href="assets/img/Internship/cognifyz.jpeg" title="Java Development Intern" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/cognifyz.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Cognifyz Technologies</h4>
+                  <p>I am also receiving a completion certificate for my role as a Java Development Intern with Cognifyz Technologies, where I gained valuable experience in Java development and project management <br>08/08/2024</p>
+                  <a href="assets/img/Internship/certificate/cognifyz.jpeg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/lor/codeclause.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Cognifyz Technologies</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/lor/codeclause.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item --> 
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/ccodeclause.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CodeClause</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/ccodeclause.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/codeclause.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CodeClause</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/codeclause.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/lor/prodigy.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/lor/prodigy.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item --> 
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/prodigy.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Prodigy Infotech</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/prodigy.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/prodigy.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Prodigy Infotech</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/prodigy.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/branewave.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>BraneWave Matrix solutions</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/branewave.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/nextgendev.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Prodigy Infotech</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/nextgendev.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/nextgen.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Prodigy Infotech</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/nextgen.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/bharatintern.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/bharatintern.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/unified.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Unified mentors</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/unified.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/codectechnologies.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Codec Technologies</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/codectechnologies.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/techplement.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Techplement</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/techplement.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/bharatintern.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/bharatintern.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/codelpha.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/codelpha.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/codeapha.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/codeapha.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/lor/codealpha.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/lor/codealpha.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/codesoft.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/codesoft.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/codsoft.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/codsoft.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/offer letter/internpe.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/offer letter/internpe.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/Internship/certificate/internpe.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Bharat Intern</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/Internship/certificate/internpe.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Internship Section -->
+
+<!-- Hackathons Section -->
+<section id="hackathon" class="portfolio section dark-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Hackathons</h2>
+    <p>Hackathons are intense and exciting events where participants work under tight deadlines to create innovative solutions. These challenges allow me to test my creativity, teamwork, and technical abilities in a fast-paced environment. Through various hackathons, I have had the chance to collaborate with developers, designers, and entrepreneurs to tackle real-world problems using cutting-edge technology.
+
+      Whether it's developing mobile apps, building websites, or creating AI-driven solutions, hackathons have provided me with invaluable hands-on experience in problem-solving, collaboration, and rapid prototyping. The pressure and intensity of these events have helped me refine my skills and think outside the box, while also fostering a spirit of innovation and teamwork.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*">All</li>
+        <li data-filter=".filter-app">Hackerwar-5.0</li>
+        <li data-filter=".filter-product">Build-A-Thon</li>
+        <li data-filter=".filter-branding">NIRMAN-5.0</li>
+        <li data-filter=".filter-books">CodeRelay-3.0</li>
+        <li data-filter=".filter-bo">Innothon-2025</li>
+        <li data-filter=".filter-proximna"  class="filter-active">Proxima-2025</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/hack-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/hack-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-3.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/hack-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/hack-2.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/hack-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/hack-3.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/hack-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/hack-4.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/hack-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/hack-5.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/hack-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/hack-6.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        
+
+        
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-4.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-5.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-6.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bo">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iiit-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iiit-7.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-2.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-4.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-5.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-6.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-7.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-8.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-9.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-10.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-10.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-11.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-11.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-12.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-12.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/nirman-13.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/nirman-13.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-2.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-4.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-5.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-6.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-7.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-8.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-9.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-10.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-10.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-11.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-11.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-12.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-12.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-13.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-13.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-14.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-14.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/iit-15.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Books 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/iit-15.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-1.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-3.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-4.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-6.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-7.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-8.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-9.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-10.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-10.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-11.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-11.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/build-12.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/build-12.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxima-1 (1).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxima-1 (1).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxima-1 (2).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxima-1 (2).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxima-1 (3).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxima-1 (3).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxima-1 (4).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxima-1 (4).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxi (1).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxi (1).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxi (2).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxi (2).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proximna">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Internship/proxi (3).JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <a href="assets/img/Internship/proxi (3).JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End Portfolio Container -->
+
+    </div>
+
+  </div>
+
+</section>
+<!-- End Hackathons Section -->
+
+    
+
+   <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section dark-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Odisha's Students</h2>
+    <p>Testimonials provide valuable insights into the experiences and feedback of those who have worked with you, helping to build trust and credibility. In this section, you'll find firsthand accounts from Odisha's students, mentors, and educators who have shared their experiences working with me. Their words reflect the quality of my work, my professionalism, and the dedication I bring to every project. Whether it's a successful collaboration, a completed project, or a growth milestone, these testimonials highlight the positive impact I’ve made through my skills, creativity, and problem-solving abilities. I am grateful for the support and feedback from those who have been part of my journey, and these testimonials inspire me to continue delivering outstanding results.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 1
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>ଓଡିଶାର ଛାତ୍ର-ଛାତ୍ରୀଙ୍କ ସହ ଯୋଗ ଦେଉଥିବା ସମୟରେ ସେମାନେ ଆମକୁ ସହଯୋଗୀ ଓ ଶ୍ରେଷ୍ଠ ମାର୍ଗଦର୍ଶକ ବୋଲି ମନେ କରିଛନ୍ତି। ସେମାନେ କହିଛନ୍ତି ଯେ, "ଏହି ଅନୁଭୂତି ଆମ ସାଥୀ ଓ ଗ୍ରହଣ କ୍ଷମତାକୁ ବୃଦ୍ଧି କରିଥିଲା।"</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <h3>ସାହିଲ୍ ସେଠୀ</h3>
+            <h4>ଓଡିଶାର ଛାତ୍ର</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"मुझे ओडिशा के छात्रों के साथ काम करने का बहुत अच्छा अनुभव मिला। उनकी कड़ी मेहनत और प्रतिबद्धता ने मुझे सिखाया कि कैसे सही मार्गदर्शन के साथ उत्कृष्ट परिणाम हासिल किए जा सकते हैं।"</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>सुमिता शर्मा</h3>
+            <h4>शिक्षक</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"Working with Odisha's students has been an eye-opening experience. Their dedication and passion for learning have inspired me to push my boundaries and offer the best guidance I can."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Ravi Kumar</h3>
+            <h4>Software Engineer</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>ଓଡିଶାର ଛାତ୍ର-ଛାତ୍ରୀମାନେ ଦ୍ରୁତ ପ୍ରତିସାଧନ କରିବା ଏବଂ ସବୁ ସମୟରେ ନୂତନ ଆଇଡିଆ ନେଇ ପରୀକ୍ଷା କରିବାରେ ଏକ ବେଶ ଅନୁଭୂତି ସାଧନ କରିଛନ୍ତି। ଏହି ଅନୁଭୂତିରୁ ସେମାନେ ବୃହତ ଉପଲବ୍ଧି ସାଧିବେ।</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>ଦୀପା ଦାସ</h3>
+            <h4>ବ୍ୟବସାୟୀ</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"The students I have worked with in Odisha have continuously shown the value of perseverance and hard work. Their determination to succeed is something I truly admire."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>Rahul Mehta</h3>
+            <h4>Entrepreneur</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact section dark-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>We'd love to hear from you! Please fill out the form below and we will get back to you as soon as possible.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-5">
+
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p><a href="https://www.google.com/maps?q=O.U.A.T+Colony,+Unit-8,+Bhubaneswar,+Odisha+751003" target="_blank">O.U.A.T Colony, Unit-8, Bhubaneswar, Odisha 751003</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p><a href="tel:+917978304877">+91 7978304877</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p><a href="mailto:nishant.sankar2003@gmail.com">nishant.sankar2003@gmail.com</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <!-- Google Maps Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d85.8188505!3d20.2936598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19d57385d03fef%3A0xd4640f27ec0ec4b4!2sO.U.A.T%20Colony%2C%20Unit-8%2C%20Bhubaneswar%2C%20Odisha%20751003%2C%20India!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form id="contact-form" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" onsubmit="sendEmail();">
+            <div class="row gy-4">
+                <div class="col-md-6">
+                    <label for="name-field" class="pb-2">Your Name</label>
+                    <input type="text" name="name" id="name-field" class="form-control" placeholder="Your Name" required="">
+                </div>
+    
+                <div class="col-md-6">
+                    <label for="email-field" class="pb-2">Your Email</label>
+                    <input type="email" class="form-control" name="email" id="email-field" placeholder="Your Email" required="">
+                </div>
+    
+                <div class="col-md-12">
+                    <label for="subject-field" class="pb-2">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject-field" placeholder="Subject" required="">
+                </div>
+    
+                <div class="col-md-12">
+                    <label for="message-field" class="pb-2">Message</label>
+                    <textarea class="form-control" name="message" rows="10" id="message-field" placeholder="Your Message" required=""></textarea>
+                </div>
+    
+                <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+    
+                    <button type="button" onclick="sendEmail()">Send Message</button>
+                </div>
+    
+            </div>
+        </form>
+    </div><!-- End Contact Form -->
+    
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("AATK03xjZ6pezREAR"); // Replace with your actual EmailJS public key
+        })();
+    
+        function sendEmail() {
+            // Get form values
+            var name = document.getElementById('name-field').value;
+            var email = document.getElementById('email-field').value;
+            var subject = document.getElementById('subject-field').value;
+            var message = document.getElementById('message-field').value;
+    
+            // Validate form values (simple validation)
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all required fields.");
+                return;
+            }
+    
+            // Prepare the message parameters
+            var params = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_name: "Recipient's Name"  // Replace with the recipient's name or use a dynamic value
+            };
+    
+            // Send email using EmailJS
+            emailjs.send('service_fisd3no', 'template_0bhb5ld', params)
+                .then(function(response) {
+                    console.log('Success:', response);
+                    alert('Message sent successfully!');
+                    // Optionally, clear the form after submission
+                    document.getElementById('contact-form').reset();
+                })
+                .catch(function(error) {
+                    console.log('Error:', error);
+                    alert('Failed to send message. Please try again later.');
+                });
+        }
+    </script>
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container">
+      <!-- Copyright Section -->
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Nishant Sankar Swain</strong> <span>All Rights Reserved</span> <span id="current-year"></span></p>
+      </div>
+  
+      <!-- Footer Description -->
+      <div class="footer-description text-center">
+        <p class="footer-text">
+          Full Stack Developer Student | ITER, Siksha 'O' Anusandhan University, Bhubaneswar, Odisha
+        </p>
+      </div>
+  
+      <!-- Social Links (Optional) -->
+      <div class="social-links text-center">
+        <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com" target="_blank" class="github"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  
+  </footer>
+  
+  <!-- JavaScript to update year automatically -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  
+  
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
