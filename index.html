@@ -1016,30 +1016,6 @@ html {
 {
   color: whitesmoke;
 }
-.view-counter {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding: 10px 15px;
-    background: #f0f0f0;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    margin-top: 20px;
-    margin-left: 530px;
-  }
-  .counter-icon {
-    margin-right: 6px;
-    font-size: 18px;
-  }
-  .counter-text {
-    margin-right: 4px;
-    color: #333;
-  }
-  .counter-number {
-    font-weight: bold;
-    color: #007BFF;
-  }
   </style>
 </head>
 
@@ -2569,25 +2545,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
 
-    <div class="view-counter">
-      <span class="counter-icon">👁️</span>
-      <span class="counter-text">Visitors:</span>
-      <span id="viewCount" class="counter-number">Loading...</span>
-    </div>
-    <script>
-      const namespace = 'nishant-portfolio-2025'; // unique identifier for your site
-      const key = 'main-homepage'; // you can change this if you want per-page views
     
-      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-        .then(res => res.json())
-        .then(data => {
-          document.getElementById('viewCount').textContent = data.value;
-        })
-        .catch(err => {
-          console.error("View count error:", err);
-          document.getElementById('viewCount').textContent = "N/A";
-        });
-    </script>
   
   </footer>
   
