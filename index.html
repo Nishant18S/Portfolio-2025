@@ -1104,6 +1104,13 @@ html {
     }
 }
 
+#portfolio
+{
+  background-color: #151f2b;
+}
+
+
+
 
   </style>
 </head>
@@ -1144,7 +1151,7 @@ html {
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="asset/img/d1.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="asset/img/d1.jpg" alt="" class="img-fluid rounded-square">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -1223,36 +1230,36 @@ html {
     }
   </style>
   <script>
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-        // Select elements by their IDs using querySelectorAll
-        const mainElements = document.querySelectorAll('#about, #resume,#hero, #portfolio,#services, #internship,#hackathon, #contact');
+    // document.getElementById('theme-toggle').addEventListener('click', function() {
+    //     // Select elements by their IDs using querySelectorAll
+    //     const mainElements = document.querySelectorAll('#about, #resume,#hero, #portfolio,#services, #internship,#hackathon, #contact');
         
-        // Loop through each selected element and toggle dark-mode
-        mainElements.forEach(function(element) {
-            element.classList.toggle('dark-mode');
-        });
+    //     // Loop through each selected element and toggle dark-mode
+    //     mainElements.forEach(function(element) {
+    //         element.classList.toggle('dark-mode');
+    //     });
 
-        // Save user preference
-        if (mainElements[0].classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-    });
+    //     // Save user preference
+    //     if (mainElements[0].classList.contains('dark-mode')) {
+    //         localStorage.setItem('theme', 'dark');
+    //     } else {
+    //         localStorage.setItem('theme', 'light');
+    //     }
+    // });
 
-    // Apply saved theme on page load
-    window.addEventListener('load', function() {
-        const savedTheme = localStorage.getItem('theme');
+    // // Apply saved theme on page load
+    // window.addEventListener('load', function() {
+    //     const savedTheme = localStorage.getItem('theme');
         
-        // Select elements by their IDs using querySelectorAll
-        const mainElements = document.querySelectorAll('#about, #resume,#hero, #portfolio,#services, #internship,#hackathons, #contact');
+    //     // Select elements by their IDs using querySelectorAll
+    //     const mainElements = document.querySelectorAll('#about, #resume,#hero, #portfolio,#services, #internship,#hackathons, #contact');
         
-        if (savedTheme === 'dark') {
-            mainElements.forEach(function(element) {
-                element.classList.add('dark-mode');
-            });
-        }
-    });
+    //     if (savedTheme === 'dark') {
+    //         mainElements.forEach(function(element) {
+    //             element.classList.add('dark-mode');
+    //         });
+    //     }
+    // });
 </script>
 
   
@@ -1347,10 +1354,10 @@ html {
         </div>
         <p class="py-3">
           As I approach the final stages of my degree, I’ve worked on a variety of projects that involved the complete software development life cycle—from designing intuitive user interfaces to building scalable back-end systems. My goal is to continue learning and developing my skills while contributing to meaningful projects. In addition to coding, I am also passionate about staying up-to-date with the latest technologies and best practices in the industry.
-        </p>
-        <p>
+          <br><br>
           When I’m not coding, I enjoy solving complex problems, collaborating with others, and exploring new technologies in the software development world. I am also interested in developing mobile applications and exploring opportunities in the field of Artificial Intelligence.
         </p>
+       
       </div>
     </div>
 
@@ -1518,7 +1525,7 @@ html {
         If you'd like to explore my full CV, click the button below to download or view it.
     </p>
     <br><br>
-    <a href="path/to/your/cv.pdf" class="btn btn-primary" target="_blank">See My CV</a>
+    <a href="https://drive.google.com/file/d/1Ay1PxQkjbTWRjO9epeKD10tuBF-TqhNs/view?usp=sharing" class="btn btn-primary" target="_blank">See My CV</a>
 </div><!-- End Section Title -->
 
 
@@ -1613,7 +1620,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
     <!-- Portfolio Section - Modern Grid Layout -->
-<section id="portfolio" class="portfolio section">
+<section id="portfolio" class="portfolio section dark-background">
 
   <!-- Section Header -->
   <div class="container">
@@ -1741,7 +1748,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   <!-- View More Button -->
   <div class="container text-center" data-aos="fade-up">
-    <a href="#" class="view-more-btn">View Complete Portfolio</a>
+    <a href="#services" class="view-more-btn">View Complete Portfolio</a>
   </div>
 
 </section>
@@ -2633,52 +2640,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <br>
       <p class="visit">Visitors Count: <span id="visitorCount">0</span></p>
+      <!-- <a href='https://www.free-counters.org/'>Get free Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=b8ddfc1e8e7df7689d59cead4309f8c0866a502b'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1325558/t/5"></script> -->
 
 <script>
-  // window.onload = function () {
-  //   const countElement = document.getElementById('visitorCount');
-    
-  //   // Get stored count (or set to 4350 if not present)
-  //   let visitorCount = localStorage.getItem('visitorCount');
-    
-  //   if (visitorCount === null) {
-  //     visitorCount = 4350;
-  //   } else {
-  //     visitorCount = parseInt(visitorCount) + 1;
-  //   }
-    
-  //   localStorage.setItem('visitorCount', visitorCount);
-
-  //   // Update the display
-  //   if (countElement) {
-  //     countElement.textContent = visitorCount;
-      
-  //     // Flip animation
-  //     countElement.classList.remove('flip');
-  //     setTimeout(() => countElement.classList.add('flip'), 10);
-  //   }
-  // };
-  window.onload = async function () {
+  window.onload = function () {
     const countElement = document.getElementById('visitorCount');
+    
+    // Get stored count (or set to 4350 if not present)
+    let visitorCount = localStorage.getItem('visitorCount');
+    
+    if (visitorCount === null) {
+      visitorCount = 4350;
+    } else {
+      visitorCount = parseInt(visitorCount) + 1;
+    }
+    
+    localStorage.setItem('visitorCount', visitorCount);
 
-    try {
-      const res = await fetch('/api/visitor');
-      const data = await res.json();
-
-      if (data.count !== undefined) {
-        countElement.textContent = data.count;
-
-        // Optional: Animation
-        countElement.classList.remove('flip');
-        setTimeout(() => countElement.classList.add('flip'), 10);
-      } else {
-        countElement.textContent = 'Error';
-      }
-    } catch (err) {
-      console.error('Visitor count fetch error:', err);
-      countElement.textContent = 'Error';
+    // Update the display
+    if (countElement) {
+      countElement.textContent = visitorCount;
+      
+      // Flip animation
+      countElement.classList.remove('flip');
+      setTimeout(() => countElement.classList.add('flip'), 10);
     }
   };
+  // window.onload = async function () {
+  //   const countElement = document.getElementById('visitorCount');
+
+  //   try {
+  //     const res = await fetch('/api/visitor');
+  //     const data = await res.json();
+
+  //     if (data.count !== undefined) {
+  //       countElement.textContent = data.count;
+
+  //       // Optional: Animation
+  //       countElement.classList.remove('flip');
+  //       setTimeout(() => countElement.classList.add('flip'), 10);
+  //     } else {
+  //       countElement.textContent = 'Error';
+  //     }
+  //   } catch (err) {
+  //     console.error('Visitor count fetch error:', err);
+  //     countElement.textContent = 'Error';
+  //   }
+  // };
 </script>
 
 <!-- <p class="visit">Visitors Count: <span id="visitorCount">Loading...</span></p>
