@@ -2646,8 +2646,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
   window.onload = function () {
     const countElement = document.getElementById('visitorCount');
-    
-    // Get stored count (or set to 4350 if not present)
     let visitorCount = localStorage.getItem('visitorCount');
     
     if (visitorCount === null) {
