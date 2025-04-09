@@ -1016,6 +1016,95 @@ html {
 {
   color: whitesmoke;
 }
+/* Wrapper to center on mobile, allow shift on desktop */
+.visit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Visit box styling */
+.visit {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    max-width: 350px;
+    width: 100%;
+}
+
+/* Hover effect */
+.visit:hover {
+    transform: scale(1.05);
+    background-color: #2c2c2c;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* Flip animation */
+#visitorCount {
+    font-weight: bold;
+    color: #00ffcc;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+}
+
+.flip {
+    animation: flipIn 0.6s ease-in-out;
+}
+
+@keyframes flipIn {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+/* Desktop: add left margin like before */
+@media screen and (min-width: 768px) {
+    .visit-container {
+        justify-content: flex-start;
+    }
+
+    .visit {
+        margin-left: 420px;
+    }
+}
+
+/* Mobile: center properly */
+@media screen and (max-width: 767px) {
+    .visit {
+        font-size: 1rem;
+        padding: 10px 14px;
+        margin-left: 0;
+    }
+
+    .visit-container {
+        justify-content: center;
+    }
+}
+
+
   </style>
 </head>
 
@@ -1429,7 +1518,7 @@ html {
         If you'd like to explore my full CV, click the button below to download or view it.
     </p>
     <br><br>
-    <a href="https://drive.google.com/file/d/1hybA44ubMzsfZh2cszKmeJmEXC3hJ-aH/view?usp=sharing" class="btn btn-primary" target="_blank">See My CV</a>
+    <a href="path/to/your/cv.pdf" class="btn btn-primary" target="_blank">See My CV</a>
 </div><!-- End Section Title -->
 
 
@@ -2541,7 +2630,79 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="mailto:nishant.sankar2003@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
         <a href="tel:+917978304877" class="phone"><i class="bi bi-telephone"></i></a>
       </div>
+
+      <br>
+      <p class="visit">Visitors Count: <span id="visitorCount">0</span></p>
+
+<script>
+  // window.onload = function () {
+  //   const countElement = document.getElementById('visitorCount');
+    
+  //   // Get stored count (or set to 4350 if not present)
+  //   let visitorCount = localStorage.getItem('visitorCount');
+    
+  //   if (visitorCount === null) {
+  //     visitorCount = 4350;
+  //   } else {
+  //     visitorCount = parseInt(visitorCount) + 1;
+  //   }
+    
+  //   localStorage.setItem('visitorCount', visitorCount);
+
+  //   // Update the display
+  //   if (countElement) {
+  //     countElement.textContent = visitorCount;
       
+  //     // Flip animation
+  //     countElement.classList.remove('flip');
+  //     setTimeout(() => countElement.classList.add('flip'), 10);
+  //   }
+  // };
+  window.onload = async function () {
+    const countElement = document.getElementById('visitorCount');
+
+    try {
+      const res = await fetch('/api/visitor');
+      const data = await res.json();
+
+      if (data.count !== undefined) {
+        countElement.textContent = data.count;
+
+        // Optional: Animation
+        countElement.classList.remove('flip');
+        setTimeout(() => countElement.classList.add('flip'), 10);
+      } else {
+        countElement.textContent = 'Error';
+      }
+    } catch (err) {
+      console.error('Visitor count fetch error:', err);
+      countElement.textContent = 'Error';
+    }
+  };
+</script>
+
+<!-- <p class="visit">Visitors Count: <span id="visitorCount">Loading...</span></p>
+
+<script>
+     window.onload = async function () {
+      const countElement = document.getElementById('visitorCount');
+      try {
+        const response = await fetch('/api/visitor');
+        const data = await response.json();
+        if (data.count !== undefined) {
+          countElement.textContent = data.count;
+        } else {
+          countElement.textContent = 'Error';
+        }
+      } catch (err) {
+        console.error(err);
+        countElement.textContent = 'Error';
+      }
+    }; -->
+
+</script>
+
+
     </div>
 
 
